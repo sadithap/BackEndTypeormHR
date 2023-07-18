@@ -34,7 +34,7 @@ export class UserService {
 
   public async validateUser(name: string, password: string) {
     const user = await this.userRepo.findOne({
-      where: [{ username: name }, { userEmail: name }],
+      where: [{ username: name }],
     });
     const compare = await Bcrypt.compare(password, user.userPassword);
     if (compare) {
