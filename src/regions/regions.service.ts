@@ -25,16 +25,16 @@ export class RegionsService {
       return error.message;
     }
   }
-  // public async update(id: number, name: string) {
-  //   try {
-  //     const region = await this.serviceReg.update(id, {
-  //       regionName: name,
-  //     });
-  //     return region;
-  //   } catch (error) {
-  //     return error.message;
-  //   }
-  // }
+  public async update1(id: number, name: string) {
+    try {
+      const region = await this.serviceReg.update(id, {
+        regionName: name,
+      });
+      return region;
+    } catch (error) {
+      return error.message;
+    }
+  }
   public async update(file, name: string, id: number) {
     try {
       const region = await this.serviceReg.update(id, {

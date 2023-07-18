@@ -37,6 +37,10 @@ export class RegionsController {
   ) {
     return this.Services.update(file, name, id);
   }
+  @Put('i/:id')
+  public async Update1(@Body('name') name: string, @Param('id') id: number) {
+    return this.Services.update1(id, name);
+  }
   @Delete(':id')
   public async Delete(@Param('id') id: number) {
     return this.Services.Delete(id);
